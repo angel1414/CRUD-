@@ -14,12 +14,12 @@ public class ctrlPilotos implements MouseListener {
     
     
   
-   //1-Mandar a llamar a las otras capas
+   
     private Piloto modelo;
     private frmPilotos vista;
  
  
-       //2- crear el constructor 
+        
     public ctrlPilotos(Piloto modelo, frmPilotos vista){
         this.modelo = modelo;
         this.vista = vista;
@@ -36,11 +36,11 @@ public class ctrlPilotos implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-    // Validar botón de Insertar
+    
     if (e.getSource() == vista.btnInsertar) {
         try {
             modelo.setNombre_Piloto(vista.txtNombre.getText());
-            modelo.setEdad_Piloto(Integer.parseInt(vista.txtEdad.getText())); // Validar entero
+            modelo.setEdad_Piloto(Integer.parseInt(vista.txtEdad.getText())); 
             modelo.setPeso_Piloto(Double.parseDouble(vista.txtPeso.getText())); // Validar double
             modelo.setCorreo_Piloto(vista.txtCorreo.getText());
             
@@ -51,16 +51,16 @@ public class ctrlPilotos implements MouseListener {
             System.out.println("Error: Ingresa valores numéricos válidos para la edad y el peso.");
         }
     }
-    // Validar botón de Eliminar
+  
     else if (e.getSource() == vista.btnEliminar) {
         modelo.Eliminar(vista.jtPilotos);
         modelo.Mostrar(vista.jtPilotos);
     }
-    // Validar selección en la tabla de pilotos
+   
     else if (e.getSource() == vista.jtPilotos) {
         modelo.cargarDatosTabla(vista);
     }
-    // Validar botón de Actualizar
+   
     else if (e.getSource() == vista.btnActualizar) {
         try {
             modelo.setNombre_Piloto(vista.txtNombre.getText());

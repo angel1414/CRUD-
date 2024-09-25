@@ -22,58 +22,42 @@ public class Piloto {
     public Piloto(){
         
     }
-    /**
-     * @return the Nombre_Piloto
-     */
+ 
     public String getNombre_Piloto() {
         return Nombre_Piloto;
     }
 
-    /**
-     * @param Nombre_Piloto the Nombre_Piloto to set
-     */
+  
     public void setNombre_Piloto(String Nombre_Piloto) {
         this.Nombre_Piloto = Nombre_Piloto;
     }
 
-    /**
-     * @return the Edad_Piloto
-     */
+ 
     public int getEdad_Piloto() {
         return Edad_Piloto;
     }
 
-    /**
-     * @param Edad_Piloto the Edad_Piloto to set
-     */
+   
     public void setEdad_Piloto(int Edad_Piloto) {
         this.Edad_Piloto = Edad_Piloto;
     }
 
-    /**
-     * @return the Peso_Piloto
-     */
+  
     public Double getPeso_Piloto() {
         return Peso_Piloto;
     }
 
-    /**
-     * @param Peso_Piloto the Peso_Piloto to set
-     */
+  
     public void setPeso_Piloto(Double Peso_Piloto) {
         this.Peso_Piloto = Peso_Piloto;
     }
 
-    /**
-     * @return the Correo_Piloto
-     */
+  
     public String getCorreo_Piloto() {
         return Correo_Piloto;
     }
 
-    /**
-     * @param Correo_Piloto the Correo_Piloto to set
-     */
+    
     public void setCorreo_Piloto(String Correo_Piloto) {
         this.Correo_Piloto = Correo_Piloto;
     }
@@ -172,7 +156,7 @@ public class Piloto {
 
     // Debemos asegurarnos que haya una fila seleccionada antes de acceder a sus valores
     if (filaSeleccionada != -1) {
-        // Obtener valores de la tabla y hacer el casting adecuado
+        
         String UUIDDeTb = vista.jtPilotos.getValueAt(filaSeleccionada, 0).toString();
         String NombreDeTB = vista.jtPilotos.getValueAt(filaSeleccionada, 1).toString();
         int EdadDeTB = (Integer) vista.jtPilotos.getValueAt(filaSeleccionada, 2);
